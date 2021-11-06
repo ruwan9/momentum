@@ -140,7 +140,9 @@ function handleTitleClick(){
 title.addEventListener("click",handleTitleClick);
 ```
 // click하면 handleTitleClick이라는 function이 동작하길 원함
+<br>
 // 그래서 handle~ 함수에 () 를 안넣은 것임
+<br>
 // 즉, js가 대신 실행시켜주길 바라는 것
 
 - function이 js에게 넘겨주고 유저가 title을 click할 경우에 js가 실행버튼을 대신 눌러주길 바라는 것을 의미
