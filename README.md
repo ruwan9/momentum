@@ -1,4 +1,78 @@
+# 1.4 Why JavaScript
+
+> 모든 브라우저에 내장되어있고, 프론트엔드 개발자가 사용할 수 있는 유일한 프로그래밍 언어
+>
+> (백엔드에서는 python, ruby, go 등 다양한 프로그래밍 언어를 사용할 수 있다.)
+
+- 모든 브라우저는 3가지의 언어만 이해한다.
+  - HTML
+  - CSS
+  - JavaScript
+
+
+
+# 1.5 Why JavaScript 2
+
+
+
+## Framework
+
+> 프로그래밍에서 특정 운영 체제를 위한 응용 프로그램 표준 구조를 구현하는 클래스와 라이브러리 모임
+
+- Frame(틀) + Work(일) : 목적에 따라 효율적으로 구조를 짜놓는 개발 방식
+- ex) angular.js, Django, React Native 등
+
+
+
+---
+
+
+
+# 2.0 First JS Project
+
+> Javascript는 이미 브라우저에 설치되어 있다.
+
+## Console
+
+> Javascript를 사용하기 위해서는 브라우저의 Console를 이용하면 된다.
+
+- 마우스 우클릭 -> Inspect -> Console
+
+- 자바스크립트와 상호작용하긴 좋지만 긴 자바스크립트 프로그램을 작성할 때는 불편
+- 때문에 Javascript File 생성 (`app.js`)
+
+
+
+## 브라우저는 HTML을 열고, HTML은 CSS와 Javascript를 가져온다.
+
+> HTML은 접착제 역할 (.html 파일을 브라우저에서 열고, HTML파일이 CSS파일과 JavaScript 파일을 가져온다.)
+
+- .js 파일이나 .css 파일을 브라우저에서 열지 않는다.
+
+```javascript
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CSS File -->
+  <link rel="stylesheet" href="style.css">
+  <title>Momentum</title>
+</head>
+<body>
+  <!-- JavaScript File -->
+  <script src="app.js"></script>
+</body>
+</html>
+```
+
+
+
+
+
 # 2.3 const and let
+
 변수만들때 let, const, var차이
 
 ## let : 재선언 금지, 재할당 가능
@@ -41,10 +115,10 @@
 - 변수도 쓰일 수 있고, boolean, text, 숫자 등 데이터 정렬이 가능
 ex) const daysOfWeek = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
 - daysOfWeek에서 5번째 element 값 출력 가능
-ex) console.log(daysOfWeek[4]) 라고 해야 5번째 값을 출력할 수 있다.
+  ex) console.log(daysOfWeek[4]) 라고 해야 5번째 값을 출력할 수 있다.
     - 컴퓨터는 숫자를 0부터 세기 때문
 - daysOfWeek 변수(Array)에 하나의 값을 더 넣고 싶다면 `.push()` 사용
-ex) daysOfWeek.push(“holiday”) 
+  ex) daysOfWeek.push(“holiday”) 
     - .push는 array 맨 마지막에 추가하는 기능.
 - JS의 주석처리는 `//` 사용
 
