@@ -25,28 +25,18 @@
 
 
 ---
-
-
-
 # 2.0 First JS Project
-
 > Javascript는 이미 브라우저에 설치되어 있다.
 
 ## Console
-
 > Javascript를 사용하기 위해서는 브라우저의 Console를 이용하면 된다.
-
 - 마우스 우클릭 -> Inspect -> Console
-
 - 자바스크립트와 상호작용하긴 좋지만 긴 자바스크립트 프로그램을 작성할 때는 불편
 - 때문에 Javascript File 생성 (`app.js`)
 
 
-
 ## 브라우저는 HTML을 열고, HTML은 CSS와 Javascript를 가져온다.
-
 > HTML은 접착제 역할 (.html 파일을 브라우저에서 열고, HTML파일이 CSS파일과 JavaScript 파일을 가져온다.)
-
 - .js 파일이나 .css 파일을 브라우저에서 열지 않는다.
 
 ```javascript
@@ -67,31 +57,40 @@
 </html>
 ```
 
+# 2.1 Basic Data Types
+자바스크립트에는 type이 있고, 그걸 알아서 이해한다.
+- integer, float, text, string
+- 자바스크립트에서 text를 입력할 때는 `""`를 붙여줘야 한다.
 
+---
+# 2.2 Variables
+> 변수: 반복을 줄이기 위해 사용
+- 값을 저장하거나 유지하는 역할
+- `const` 또는 `let` 키워드를 이용해 변수 생성
+- 변수의 이름을 정할 때는 camelCase 사용
 
-
-
+---
 # 2.3 const and let
-
 변수만들때 let, const, var차이
+(기본적으로 const 사용, 필요할 때 let 사용)
 
-## let : 재선언 금지, 재할당 가능
+## let : 재선언 금지(새로운 것을 생성할때만 사용), 재할당 가능
 - 재선언 금지
-    let a = b;
-    let a = c;
+    let a = b;  # 선언
+    let a = c;  # 재선언 불가
 - 재할당은 가능
-    let a = b;
-    a = c;
+    let a = b;  # 선언
+    a = c;  # 재할당 가능
 
-## const : 재선언 금지, 재할당 금지
+## const : 재선언 금지, 재할당 금지(상수, 값이 바뀔 수 없다.)
 - 재선언 금지
-    const a = b;
-    const a = c;
+    const a = b;  # 선언
+    const a = c;  # 재선언 불가
 - 재할당 금지
-    const a = b;
-    a = c;
+    const a = b;  # 선언
+    a = c;  # 재할당 불가
 
-## var : 재선언 가능, 재할당 가능
+## var : 재선언 가능, 재할당 가능 (사용 안함)
 - 재선언, 재할당 가능
     var a = b;
     var a = c;
@@ -99,33 +98,34 @@
 
 ---
 # 2.4 Booleans
+> `true` or `false`
 1. true =/= "true"
 2. false =/= "false"
-3. null = 값이 없음
+3. null = 값이 없음(nothing inside, variable 안에 아무것도 없다는 것을 확실하게 하기 위해 사용)
     - null =/= undefined
-    - null =/= false
-4. undefined = 값이 정의되지 않음
+    - null =/= false (false는 false라는 값이 있다.)
+4. undefined = 값이 정의되지 않음 (variable은 메모리 안에 존재하지만 값이 들어가지 않은 상태)
 
 
 ---
 # 2.5 Arrays
 - 하나의 변수 안에 데이터의 list를 가지는 것
 - 데이터를 나열하기 위한 방법 중 하나
-- 항상 [ ] 안에 콤마(,)로 데이터들을 나열
+- 항상 `[]` 안에 콤마(,)로 데이터들을 나열
 - 변수도 쓰일 수 있고, boolean, text, 숫자 등 데이터 정렬이 가능
-ex) const daysOfWeek = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
+    ex) const daysOfWeek = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
 - daysOfWeek에서 5번째 element 값 출력 가능
-  ex) console.log(daysOfWeek[4]) 라고 해야 5번째 값을 출력할 수 있다.
+    ex) console.log(daysOfWeek[4]) 라고 해야 5번째 값을 출력할 수 있다.
     - 컴퓨터는 숫자를 0부터 세기 때문
 - daysOfWeek 변수(Array)에 하나의 값을 더 넣고 싶다면 `.push()` 사용
-  ex) daysOfWeek.push(“holiday”) 
+    ex) daysOfWeek.push(“holiday”) 
     - .push는 array 맨 마지막에 추가하는 기능.
 - JS의 주석처리는 `//` 사용
 
 
 ---
 # 2.6 Objects
-- object는 property를 가진 데이터를 저장해주며, { } 를 사용
+- object는 property를 가진 데이터를 저장해주며, `{}` 를 사용
 ex)
 ```
 const player = {
@@ -152,7 +152,7 @@ console.log(player.color);  // blue
 
 - property 추가 가능
 player.koreanName = "토마토";
-console.log(player);  // {name: "tomato", color: "blue", food: true, koreaName: "토마토"}
+console.log(player);  // {name: "tomato", color: "blue", food: true, koreanName: "토마토"}
 
 
 ---
