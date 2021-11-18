@@ -179,15 +179,37 @@ player.sayHello("lynn");  // Hello lynn nice to meet you!
 
 
 ---
+# 3.0
+JavaScript : HTML과 상호작용 하기 위해 사용 (이미 HTML에 연결되있다.)
+(HTML의 Element들을 JavaScript를 통해 변경하고 읽을 수 있다.)
+
+`document` : HTML을 JavaScript의 관점으로 보여줌(Object)
+- document === 우리의 website
+    - document.title, document.body 등
+
+
+---
+# 3.1
+`getElementById()` : HTML에서 ID를 통해 element를 찾아준다.
+
+`document.getElementById("title")` : JavaScript로 id="title"을 가진 태그를 가져옴
+
+- JavaScript : HTML element를 가져올 수 있지만 HTML 자체를 보여주지는 않는다.(Object를 보여줌)
+- 앞으로 할 일들:
+    - HTML에서 항목들을 가지고오고, JavaScript를 통해 변경
+
+
+---
 # 3.2
-- getElementsByClassName() : 많은 element를 가져올때 사용(array를 반환)
-- getElementsByTagName() : name을 할당 가능(array를 반환)
-- querySelector : element를 CSS selector방식으로 검색 가능 (ex. h1:first-child)
+- `getElementsByClassName()` : class 이름을 통해 많은 element를 가져올때 사용(array를 반환)
+- `getElementsByTagName()` : tag 이름을 통해 가져올 때 사용(array를 반환)
+- **`querySelector`** : element를 CSS selector방식으로 검색 가능
     - 단 하나의 element를 return해줌
     - hello란 class 내부에 있는 h1을 가지고 올 수 있다(id도 가능함)
+        - `document.querySelector(".hello h1")`
     - 첫번째 element만 가져옴
-    - 조건에 맞는 세개 다 가져오고 싶으면 querySelectorAll
-        - 세개의 h1이 들어있는 array를 가져다 줌
+    - 조건에 맞는 값들을 다 가져오고 싶으면 `querySelectorAll` 사용
+        - `document.querySelectorAll(".hello h1") : h1이 들어있는 array를 가져다 줌
 - querySelector("#hello"); 와 getElementById("hello"); 는 같다
     - 하지만 후자는 하위요소 가져오는 것을 못하므로 전자를 사용하는게 좋다.
 
@@ -195,14 +217,14 @@ player.sayHello("lynn");  // Hello lynn nice to meet you!
 ---
 # 3.3
 - document가 html이 js파일을 load하기 때문에 존재 → 그 다음에 browser가 우리가 document에 접근할 수 있게 해줌
-- element의 내부를 보고 싶으면 console.dir() 사용
+- element의 내부를 보고 싶으면 `console.dir()` 사용
     - 기본적으로 object로 표시한 element를 보여줌(전부 js object임)
-- element 중 앞에 on이 붙은 것들은 `event`
+- element 중 앞에 'on'이 붙은 것들은 `event`
     - event: 어떤 행위를 하는 것
     - 모든 event는 js가 listen할 수 있음
-- eventListener : event를 listen함
+- `eventListener` : event를 listen함
     - js에게 무슨 event를 listen하고 싶은 지 알려줘야 함
-- title.addEventListener("click") : 누군가가 title을 click하는 것을 listen할 거임 → 무언가를 해줘야함
+- `title.addEventListener("click")`  : 누군가가 title을 click하는 것을 listen할 거임 → 무언가를 해줘야함
 
 ```
 const title = document.querySelector("div.hello:first-child h1");
